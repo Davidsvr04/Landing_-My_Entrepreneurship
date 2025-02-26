@@ -1,17 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './styles/Navbar.css';
+import logo from '../assets/images/Logo_Sr_Chorizo.png'; 
+import '../styles/Navbar.css';
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <Link to="/">Chorizos Deliciosos</Link>
+      <a href="/">
+          <img src={logo} alt="Logo" />
+        </a>
       </div>
       <ul className="nav-links">
-        <li><Link to="/about">Sobre Nosotros</Link></li>
-        <li><Link to="/products">Productos</Link></li>
-        <li><Link to="/contact">Contacto</Link></li>
+        <li><a href="#about">Sobre Nosotros</a></li>
+        <li><a href="#products">Productos</a></li>
+        <li><a href="#contact">Contacto</a></li>
       </ul>
     </nav>
   );
